@@ -1,16 +1,14 @@
 import "./App.css";
-import CarValueCalc from "./components/CarValueCalc/CarValueCalc";
 import Header from "./components/Header";
-import QuoteCalc from "./components/QuoteCalc/QuoteCalc";
-import RiskRatingCalc from "./components/RiskRatingCalc/RiskRatingCalc";
+import QuoteQuestions from "./components/QuoteQuestions";
 
 function App() {
   return (
     <>
       <Header />
-      <CarValueCalc />
-      <RiskRatingCalc />
-      <QuoteCalc />
+      <div className="main">
+        <QuoteQuestions />
+      </div>
     </>
   );
 }
