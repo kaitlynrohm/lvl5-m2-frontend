@@ -1,0 +1,25 @@
+/* Styles for design of page */
+.header {
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000092;
+  color: white;
+  align-items: center;
+}
+
+.header-title,
+.link-list li {
+  padding: 10px;
+}
+
+.header-title:hover,
+.link-list li:hover {
+  color: #92e5ff;
+  cursor: pointer;
+}
+
+.link-list {
+  list-style: none;
+  display: flex;
+}
