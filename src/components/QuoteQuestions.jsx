@@ -14,6 +14,19 @@ export default function QuoteQuestions() {
   const [riskRating, setRiskRating] = useState("");
   const [quote, setQuote] = useState("");
 
+  //Function
+  const handleClick = () => {
+    if (carValueDisplay) {
+      setCarValueDisplay(false);
+      setRiskRatingDisplay(true);
+    } else if (riskRatingDisplay) {
+      setRiskRatingDisplay(false);
+      setQuoteDisplay(true);
+    } else {
+      console.log("Something went wrong");
+    }
+  };
+
   return (
     <div className="quote-questions">
       <div
@@ -22,12 +35,13 @@ export default function QuoteQuestions() {
       >
         <CarValueCalc />
         <div className="btn-div">
-          <button className="question-btn" disabled="true">
+          <button className="question-btn" disabled={true}>
             Prev
           </button>
           <button
             className="question-btn"
-            disabled={carValue ? "false" : "true"}
+            disabled={carValue ? false : true}
+            onClick={handleClick}
           >
             Next
           </button>
@@ -42,7 +56,8 @@ export default function QuoteQuestions() {
           <button className="question-btn">Prev</button>
           <button
             className="question-btn"
-            disabled={riskRating ? "false" : "true"}
+            disabled={riskRating ? false : true}
+            onClick={handleClick}
           >
             Next
           </button>
@@ -55,7 +70,7 @@ export default function QuoteQuestions() {
         <QuoteCalc />
         <div className="btn-div">
           <button className="question-btn">Prev</button>
-          <button className="question-btn" disabled={quote ? "false" : "true"}>
+          <button className="question-btn" disabled={true}>
             Next
           </button>
         </div>
