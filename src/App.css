@@ -26,6 +26,19 @@
   display: flex;
 }
 
+.link-list li {
+  padding: 0 15px;
+}
+
+.link-list li a {
+  color: white;
+  text-decoration: none;
+}
+
+.link-list li a:hover {
+  color: #92e5ff;
+}
+
 /* Main body styling */
 .main {
   background-color: #92e5ff;
