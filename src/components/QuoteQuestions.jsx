@@ -10,18 +10,30 @@ export default function QuoteQuestions() {
   const [quoteDisplay, setQuoteDisplay] = useState(false);
 
   //states with api results
-  const [carValue, setCarValue] = useState("");
-  const [riskRating, setRiskRating] = useState("");
+  const [carValue, setCarValue] = useState("a");
+  const [riskRating, setRiskRating] = useState("a");
   const [quote, setQuote] = useState("");
 
   //Function
-  const handleClick = () => {
+  const handleNext = () => {
     if (carValueDisplay) {
       setCarValueDisplay(false);
       setRiskRatingDisplay(true);
     } else if (riskRatingDisplay) {
       setRiskRatingDisplay(false);
       setQuoteDisplay(true);
+    } else {
+      console.log("Something went wrong");
+    }
+  };
+
+  const handlePrev = () => {
+    if (riskRatingDisplay) {
+      setCarValueDisplay(true);
+      setRiskRatingDisplay(false);
+    } else if (quoteDisplay) {
+      setRiskRatingDisplay(true);
+      setQuoteDisplay(false);
     } else {
       console.log("Something went wrong");
     }
@@ -41,7 +53,7 @@ export default function QuoteQuestions() {
           <button
             className="question-btn"
             disabled={carValue ? false : true}
-            onClick={handleClick}
+            onClick={handleNext}
           >
             Next
           </button>
@@ -53,11 +65,13 @@ export default function QuoteQuestions() {
       >
         <RiskRatingCalc />
         <div className="btn-div">
-          <button className="question-btn">Prev</button>
+          <button className="question-btn" onClick={handlePrev}>
+            Prev
+          </button>
           <button
             className="question-btn"
             disabled={riskRating ? false : true}
-            onClick={handleClick}
+            onClick={handleNext}
           >
             Next
           </button>
@@ -69,7 +83,9 @@ export default function QuoteQuestions() {
       >
         <QuoteCalc />
         <div className="btn-div">
-          <button className="question-btn">Prev</button>
+          <button className="question-btn" onClick={handlePrev}>
+            Prev
+          </button>
           <button className="question-btn" disabled={true}>
             Next
           </button>
