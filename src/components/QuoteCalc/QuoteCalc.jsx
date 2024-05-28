@@ -11,7 +11,7 @@ function QuoteCalc() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/get_quote", {
+      const response = await axios.post("/api/get_quote", {
         car_value: parseInt(carValue),
         risk_rating: parseInt(riskRating),
       });

@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import QuoteQuestions from "./components/QuoteQuestions";
 import QuoteCalc from "./components/QuoteCalc/QuoteCalc";
 import CarValueCalc from "./components/CarValueCalc/CarValueCalc";
-import RiskRatingCalc from "./components/RiskRatingCalc/RiskRatingCalc"; 
+import RiskRatingCalc from "./components/RiskRatingCalc/RiskRatingCalc";
 
 function App() {
   return (
