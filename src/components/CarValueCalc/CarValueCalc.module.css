@@ -1,0 +1,34 @@
+.flex,
+.carValueDiv {
+  display: flex;
+  width: 100%;
+}
+
+.carValueDiv {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.flex {
+  justify-content: space-around;
+  height: 25vh;
+}
+
+.question {
+  padding: 30px 0 40px;
+}
+
+.submitBtn {
+  margin-top: 10px;
+  background-color: #92e5ff;
+  border: 1px #000092 solid;
+  padding: 5px 25px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+}
+
+.submitBtn:hover {
+  background-color: #d9f4fc;
+  cursor: pointer;
+}
