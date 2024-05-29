@@ -10,7 +10,7 @@ export default function QuoteQuestions() {
   const [quoteDisplay, setQuoteDisplay] = useState(false);
 
   //states with api results
-  const [carValue, setCarValue] = useState("a");
+  const [carValue, setCarValue] = useState("");
   const [riskRating, setRiskRating] = useState("a");
   const [quote, setQuote] = useState("");
 
@@ -45,7 +45,7 @@ export default function QuoteQuestions() {
         style={{ display: !carValueDisplay && "none" }}
         className="question-div"
       >
-        <CarValueCalc />
+        <CarValueCalc carValue={carValue} setCarValue={setCarValue} />
         <div className="btn-div">
           <button className="question-btn" disabled={true}>
             Prev
