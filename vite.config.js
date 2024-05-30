@@ -8,10 +8,7 @@ export default defineConfig({
       "/api": {
         target: "http://localhost:3000",
         changeOrigin: true,
-        rewrite: (path) => {
-          console.log("Rewriting path:", path);
-          return path.replace(/^\/api/, "");
-        },
+        rewrite: (path) => path.replace(/^\/api/, ""),
         onProxyReq: (proxyReq, req, res) => {
           console.log("Proxying request:", req.url);
         },
